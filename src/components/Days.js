@@ -13,7 +13,7 @@ export default (props) => {
     //calculating days that are left in the month after blank spots in the week row
     let daysInMonth = [];
     for (let d = 1; d <= props.daysInMonth(); d++) {
-        let className = (d === props.currentDay() ? "day current-day": "day");
+        let className = (d == parseInt(props.currentDay()) ? "day current-day": "day");
         //let selectedClass = (d === this.props.selectedDay ? " selected-day " : "");
         daysInMonth.push(
             <td key={d} className={className} >
@@ -25,7 +25,7 @@ export default (props) => {
     console.log("days: ", daysInMonth);
 
     // totalSlots are just blank sports and remained days combined together
-    let totalSlots = [...blanks, ...daysInMonth];
+    let totalSlots = [...blanks, ...daysInMonth, ...blanks];
     let rows = [];
     let cells = [];
 

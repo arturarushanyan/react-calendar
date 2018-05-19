@@ -9,6 +9,7 @@ tr {
 
 .calendar-container {
     border: 2px solid skyblue;
+    position: relative;
 }
 
 .calendar {
@@ -50,13 +51,20 @@ tr {
     line-height: 24px;
 }
 
+.calendar tr td:nth-child(6) {
+    color: red;
+}
+.calendar tr td:nth-child(7) {
+    color: red;
+}
+
 .current-day {
     background-color: #4285f4;
     width: 28px;
     height: 28px;
     line-height: 28px;
     border-radius: 2%;
-    color: white;
+    color: white !important;
 }
 .selected-day {
     background-color:yellow;
